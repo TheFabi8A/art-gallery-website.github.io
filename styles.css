@@ -6,8 +6,8 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #333;
+picture {
+    line-height: 0;
 }
 
 :root {
@@ -29,12 +29,13 @@ body {
 .title-header {
     font-family: "Big Shoulders Display", sans-serif;
     font-weight: 900;
-    font-size: 4.3em;
+    font-size: 4em;
 }
 
 .paragraph-header {
     font-family: Outfit, sans-serif;
     font-weight: 100;
+    font-size: 1.1em;
 }
 
 .paragraph-header strong {
@@ -42,23 +43,25 @@ body {
 }
 
 .btn-our-location {
+    box-sizing: content-box;
     font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
     letter-spacing: 0.35em;
     text-align: left;
     padding-left: 20px;
-    font-size: 1em;
+    font-size: 0.9em;
     border: none;
     position: relative;
     background-color: #000;
     color: #fff;
-    height: 75px;
-    width: 175px;
+    height: 60px;
+    width: 150px;
     align-self: flex-start;
 }
 
 .btn-our-location::after {
     content: "";
-    background: var(--accent-color) url("svg/icon-arrow-right.svg") center / 25% no-repeat;
+    background: var(--accent-color) url("svg/icon-arrow-right.svg") center / 20% no-repeat;
     position: absolute;
     right: -50px;
     top: 0;
@@ -69,10 +72,96 @@ body {
 .btn-our-location:hover {
     background-color: var(--accent-color);
     cursor: pointer;
+    color: #000;
 }
 
 .btn-our-location:hover::after {
     background-color: #000;
+}
+
+.main {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+[class^="mobile"] {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+[class^="block-main"] {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.block-main-first {
+    background-color: hsl(0deg 0% 80%);
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.block-main-last {
+    background-color: #000;
+    color: #fff;
+}
+
+.title-block {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.paragraph-block {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+[class^="tablet-grid"],
+[class^="desktop-grid"] {
+    display: none;
+}
+
+.footer {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 50px 75px 50px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.title-footer {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 900;
+    font-size: 2.5em;
+}
+
+.paragraph-footer {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: flex-start;
+    gap: 15px;
+}
+
+[class$="icon"] {
+    width: 40px;
+    height: 40px;
+}
+
+[class$="icon"]:hover {
+    cursor: pointer;
+    fill: var(--accent-color);
 }
 
 @media screen and (min-width: 500px) and (max-width: 1023px) {
@@ -83,6 +172,10 @@ body {
 
 @media screen and (min-width: 1024px) {
     .img-header-tablet {
+        display: none;
+    }
+
+    [class^="tablet-grid"] {
         display: none;
     }
 }
