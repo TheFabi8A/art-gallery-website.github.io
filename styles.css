@@ -164,9 +164,18 @@ picture {
     fill: var(--accent-color);
 }
 
-@media screen and (min-width: 500px) and (max-width: 1023px) {
+@media screen and (min-width: 501px) and (max-width: 1023px) {
     body {
         margin: 0;
+    }
+
+    [class^="tablet-grid"] {
+        display: block;
+    }
+
+    [class^="mobile-grid"],
+    [class^="desktop-grid"] {
+        display: none;
     }
 }
 
