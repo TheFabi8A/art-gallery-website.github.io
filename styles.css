@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #333;
+}
+
 picture {
     line-height: 0;
 }
@@ -151,7 +155,6 @@ picture {
 .paragraph-footer {
     font-family: Outfit, sans-serif;
     font-weight: 400;
-    font-size: 1.1em;
 }
 
 .social-container {
@@ -162,8 +165,8 @@ picture {
 }
 
 [class$="icon"] {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 [class$="icon"]:hover {
@@ -171,7 +174,7 @@ picture {
     fill: var(--accent-color);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
     [class^="tablet"] {
         display: block;
         width: 100%;
@@ -194,16 +197,14 @@ picture {
     }
 
     .content {
-        padding-top: 80px;
+        padding: 0;
+        padding-top: 95px;
         position: relative;
         left: -70px;
     }
 
     .title-header {
         font-size: 3.6em;
-
-        /* color: #fff;
-        mix-blend-mode: difference; */
     }
 
     .paragraph-header {
@@ -259,14 +260,63 @@ picture {
     .title-block {
         font-size: 3.45em;
     }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px;
+    }
+
+    .paragraph-footer {
+        width: 235px;
+    }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
+    [class^="tablet"] {
+        display: none;
+    }
+
+    [class^="mobile"] {
+        display: none;
+    }
+
+    [class^="desktop"] {
+        display: block;
+    }
+
     .img-header-tablet {
         display: none;
     }
 
-    [class^="tablet-grid"] {
-        display: none;
+    .header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .img-header-desktop {
+        position: relative;
+        left: 450px;
+        box-shadow: -450px 0 0 0 #000;
+    }
+
+    .content {
+        padding: 0;
+        z-index: 5;
+        position: relative;
+        height: 400px;
+        align-self: center;
+    }
+
+    .title-header {
+        font-size: 5em;
+        position: absolute;
+        top: 0;
+        left: -300px;
+        color: #fff;
+    }
+
+    .paragraph-header {
+        width: 300px;
     }
 }
