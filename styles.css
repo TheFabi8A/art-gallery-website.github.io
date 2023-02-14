@@ -312,7 +312,7 @@ picture {
         position: relative;
         left: 420px;
         top: 30px;
-        align-self: center;
+        margin-top: 11em;
     }
 
     .title-header {
